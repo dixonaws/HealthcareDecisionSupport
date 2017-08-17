@@ -1,0 +1,23 @@
+{
+  "currentIntent": {
+    "slots": {
+      "PreferHSA": "yes",
+      "ExtremeSports": "no",
+      "WiseConsumer": "yes",
+      "HighConsumer": "no",
+      "TrackExpenses": "no"
+    },
+    "name": "BookCar",
+    "confirmationStatus": "None"
+  },
+  "bot": {
+    "alias": "$LATEST",
+    "version": "$LATEST",
+    "name": "HealthcareDecisionSupport"
+  },
+  "userId": "dixonaws",
+  "invocationSource": "DialogCodeHook",
+  "outputDialogMode": "Text",
+  "messageVersion": "1.0",
+  "sessionAttributes": {}
+}
