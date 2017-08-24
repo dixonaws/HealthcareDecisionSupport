@@ -59,17 +59,6 @@ def close(session_attributes, fulfillment_state, message):
 
     return response
 
-def close(fulfillment_state, message):
-    response = {
-        'dialogAction': {
-            'type': 'Close',
-            'fulfillmentState': fulfillment_state,
-            'message': message
-        }
-    }
-
-    return response
-
 
 def delegate(session_attributes, slots):
     return {
@@ -81,7 +70,7 @@ def delegate(session_attributes, slots):
     }
 
 
-# --- End Helper Functions ---
+# --- Helper Functions ---
 
 
 def safe_int(n):
@@ -495,33 +484,6 @@ def book_car(intent_request):
     )
 
 
-# --- HealthcareDecisionSupport Intents ---
-
-def healthcareDecisionSupport(intent_request):
-    logger.debug("reached healthcareDecisionSupport intent method")
-
-    session_attributes = intent_request['sessionAttributes'] if intent_request['sessionAttributes'] is not None else {}
-
-    # Receive the slots from the Lex chatbot and place the values into variables that match the slot name
-    slots = intent_request['currentIntent']['slots']
-
-    # Assign slots to variables that we can work with in this function
-    PreferHSA = slots['PreferHSA']
-    ExtremeSports = slots['ExtremeSports']
-    WiseConsumer = slots['WiseConsumer']
-    HighConsumer = slots['HighConsumer']
-    TrackExpenes = slots['TrackExpenses']
-
-    logger.debug('PreferHSA=' + PreferHSA)
-
-    return close(
-        'Fulfilled',
-        {
-            'contentType': 'PlainText',
-            'content': 'I recommend you enroll into a high-deductible healthcare plan.'
-        }
-    )
-
 # --- Intents ---
 
 
@@ -535,11 +497,11 @@ def dispatch(intent_request):
     intent_name = intent_request['currentIntent']['name']
 
     # Dispatch to your bot's intent handlers
-    # We only support one intent at this time (so the dispatch method is only kept for good form)
-    if intent_name == 'HealthcareDecisionSupport':
-        return healthcareDecisionSupport(intent_request)
+    if intent_name == 'BookHotel':
+        return book_hotel(intent_request)
+    elif intent_name == 'BookCar':
+        return book_car(intent_request)
 
-    logger.debug('Intent with name ' + intent_name + ' not supported')
     raise Exception('Intent with name ' + intent_name + ' not supported')
 
 
@@ -551,7 +513,6 @@ def lambda_handler(event, context):
     Route the incoming request based on intent.
     The JSON body of the request is provided in the event slot.
     """
-
     # By default, treat the user request as coming from the America/New_York time zone.
     os.environ['TZ'] = 'America/New_York'
     time.tzset()

@@ -57,8 +57,8 @@ def close(fulfillment_state, message):
 
     return response
 
-
-def delegate(session_attributes, slots):
+# added message to this method, does it work? no
+def delegate(session_attributes, slots, message):
     return {
         'sessionAttributes': session_attributes,
         'dialogAction': {
@@ -67,6 +67,18 @@ def delegate(session_attributes, slots):
         }
     }
 
+def try_ex(func):
+    """
+    Call passed in function in try block. If KeyError is encountered return None.
+    This function is intended to be used to safely access dictionary.
+
+    Note that this function would have negative impact on performance.
+    """
+
+    try:
+        return func()
+    except KeyError:
+        return None
 
 # --- End Helper Functions ---
 
@@ -78,19 +90,39 @@ def healthcareDecisionSupport(intent_request):
 
     # Receive the slots from the Lex chatbot and place the values into variables that match the slot name
     slots = intent_request['currentIntent']['slots']
-    PreferHSA = slots['PreferHSA']
-    ExtremeSports = slots['ExtremeSports']
-    WiseConsumer = slots['WiseConsumer']
-    HighConsumer = slots['HighConsumer']
-    TrackExpenes = slots['TrackExpenses']
 
-    logger.debug('PreferHSA=' + PreferHSA)
+    # Receive the session_attributes, or set to None if there are none
+    session_attributes = intent_request['sessionAttributes'] if intent_request['sessionAttributes'] is not None else {}
 
+    # We call try_ex to safely access the dictionary object, knowing that some of the slots may not contain data
+    logger.debug('healthcareDecisionSupport(): loading slot values...')
+    PreferHSA = try_ex(lambda: slots['PreferHSA'])
+    ExtremeSports = try_ex(lambda: slots['ExtremeSports'])
+    WiseConsumer = try_ex(lambda: slots['WiseConsumer'])
+    HighConsumer = try_ex(lambda: slots['HighConsumer'])
+    TrackExpenses = try_ex(lambda: slots['TrackExpenses'])
+
+    # test debug message
+    logger.debug('PreferHSA={}'.format(PreferHSA))
+
+    # When to display the welcome message? When no slots contain data AND we have invocationSource=DialogCodeHook
+    if(intent_request['invocationSource'] == "DialogCodeHook") and (PreferHSA is None) and (ExtremeSports is None) and (WiseConsumer is None) and (HighConsumer is None) and (TrackExpenses is None):
+        logger.debug("healthcareDecisionSupport: I received dialog code hook.")
+        logger.debug('All slots appear to contain no data')
+
+        # the delegate method works
+        # return delegate(session_attributes, slots)
+
+        slot_to_elicit=str('PreferHSA')
+        message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
+        return elicit_slot(session_attributes, intent_request['currentIntent']['name'],slots,slot_to_elicit, message)
+
+    # if we fall through to this point, we consider the call a fulfillment request
     return close(
         'Fulfilled',
         {
             'contentType': 'PlainText',
-            'content': 'I recommend you enroll into a high-deductible healthcare plan.'
+            'content': 'HermanMiller HealthcareDecisionSupport v1.0: I recommend you enroll into a high-deductible healthcare plan.'
         }
     )
 
@@ -108,7 +140,7 @@ def dispatch(intent_request):
 
     # Dispatch to your bot's intent handlers
     # We only support one intent at this time (so the dispatch method is only kept for good form)
-    if intent_name == 'HealthcareDecisionSupport':
+    if (intent_name == 'HealthcareDecisionSupport'):
         return healthcareDecisionSupport(intent_request)
 
     logger.debug('Intent with name ' + intent_name + ' not supported')
@@ -128,5 +160,6 @@ def lambda_handler(event, context):
     os.environ['TZ'] = 'America/New_York'
     time.tzset()
     logger.debug('event.bot.name={}'.format(event['bot']['name']))
+    logger.debug('invocationSource={}'.format(event['invocationSource']))
 
     return dispatch(event)
