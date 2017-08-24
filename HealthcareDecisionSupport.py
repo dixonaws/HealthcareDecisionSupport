@@ -122,7 +122,7 @@ def healthcareDecisionSupport(intent_request):
         'Fulfilled',
         {
             'contentType': 'PlainText',
-            'content': 'HermanMiller HealthcareDecisionSupport v1.0: I recommend you enroll into a high-deductible healthcare plan.'
+            'content': 'HermanMiller HealthcareDecisionSupport v1.1: I recommend you enroll into a high-deductible healthcare plan.'
         }
     )
 
