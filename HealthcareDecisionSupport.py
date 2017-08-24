@@ -111,7 +111,7 @@ def healthcareDecisionSupport(intent_request):
         logger.debug('All slots appear to contain no data')
 
         # the delegate method works
-        return delegate(session_attributes, slots)
+        #return delegate(session_attributes, slots)
 
         #slot_to_elicit=str('PreferHSA')
         #message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
