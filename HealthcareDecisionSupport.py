@@ -111,11 +111,11 @@ def healthcareDecisionSupport(intent_request):
         logger.debug('All slots appear to contain no data')
 
         # the delegate method works
-        # return delegate(session_attributes, slots)
+        return delegate(session_attributes, slots)
 
-        slot_to_elicit=str('PreferHSA')
-        message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
-        return elicit_slot(session_attributes, intent_request['currentIntent']['name'],slots,slot_to_elicit, message)
+        #slot_to_elicit=str('PreferHSA')
+        #message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
+        #return elicit_slot(session_attributes, intent_request['currentIntent']['name'],slots,slot_to_elicit, message)
 
     # if we fall through to this point, we consider the call a fulfillment request
     return close(
