@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4c4848-0672-48ea-aab5-42c0b9a52528" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HealthcareDecisionSupport.py" afterPath="$PROJECT_DIR$/HealthcareDecisionSupport.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CognitoSetup.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hmi-hr-chatbot/HealthcareDecisionSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hmi-hr-chatbot/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HealthcareDecisionSupport.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HealthcareDecisionSupport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
+            <state relative-caret-position="180">
               <caret line="113" column="9" lean-forward="false" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
               <folding>
                 <element signature="e#501#512#0" expanded="true" />
@@ -25,43 +28,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HealthcareDecisionSupport-orig.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport-orig.py">
+      <file leaf-file-name="CognitoSetup.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CognitoSetup.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="502" column="119" lean-forward="true" selection-start-line="502" selection-start-column="4" selection-end-line="502" selection-end-column="119" />
+            <state relative-caret-position="150">
+              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LexBookTrip.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LexBookTrip.py">
+      <file leaf-file-name="HealthcareDecisionSupport.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hmi-hr-chatbot/HealthcareDecisionSupport.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="854">
-              <caret line="288" column="86" lean-forward="false" selection-start-line="288" selection-start-column="80" selection-end-line="288" selection-end-column="86" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="75" lean-forward="false" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
               <folding>
-                <element signature="e#501#512#0" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampleEvent.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SampleEvent.json">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hmi-hr-chatbot/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deploy.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="112" lean-forward="false" selection-start-line="1" selection-start-column="112" selection-end-line="1" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -73,6 +69,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -94,6 +91,9 @@
         <option value="$PROJECT_DIR$/LexBookTrip.py" />
         <option value="$PROJECT_DIR$/HealthcareDecisionSupport-orig.py" />
         <option value="$PROJECT_DIR$/HealthcareDecisionSupport.py" />
+        <option value="$PROJECT_DIR$/CognitoSetup.txt" />
+        <option value="$PROJECT_DIR$/HealthcareDecisionSupport.html" />
+        <option value="$PROJECT_DIR$/hmi-hr-chatbot/index.html" />
       </list>
     </option>
   </component>
@@ -104,8 +104,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="275" />
-    <option name="y" value="92" />
+    <option name="x" value="855" />
+    <option name="y" value="114" />
     <option name="width" value="1469" />
     <option name="height" value="1186" />
   </component>
@@ -132,6 +132,11 @@
               <item name="HealthcareDecisionSupport" type="b2602c69:ProjectViewProjectNode" />
               <item name="HealthcareDecisionSupport" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HealthcareDecisionSupport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HealthcareDecisionSupport" type="462c0819:PsiDirectoryNode" />
+              <item name="hmi-hr-chatbot" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -142,8 +147,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hmi-hr-chatbot" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -191,7 +201,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="275" y="92" width="1469" height="1186" extended-state="0" />
+    <frame x="855" y="114" width="1469" height="1186" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26752892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -228,6 +238,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#501#512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
@@ -236,22 +256,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="70" lean-forward="false" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SampleEvent.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh" />
+    <entry file="file://$PROJECT_DIR$/SampleEvent.json" />
     <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7560">
@@ -262,14 +268,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="70" lean-forward="false" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -298,47 +297,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleEvent.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport-orig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="502" column="119" lean-forward="true" selection-start-line="502" selection-start-column="4" selection-end-line="502" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LexBookTrip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="288" column="86" lean-forward="false" selection-start-line="288" selection-start-column="80" selection-end-line="288" selection-end-column="86" />
-          <folding>
-            <element signature="e#501#512#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleEvent.json" />
+    <entry file="file://$PROJECT_DIR$/deploy.sh" />
+    <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport-orig.py" />
+    <entry file="file://$PROJECT_DIR$/LexBookTrip.py" />
     <entry file="file://$PROJECT_DIR$/HealthcareDecisionSupport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="180">
           <caret line="113" column="9" lean-forward="false" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
           <folding>
             <element signature="e#501#512#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CognitoSetup.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmi-hr-chatbot/HealthcareDecisionSupport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="75" lean-forward="false" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmi-hr-chatbot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="112" lean-forward="false" selection-start-line="1" selection-start-column="112" selection-end-line="1" selection-end-column="112" />
+          <folding />
         </state>
       </provider>
     </entry>

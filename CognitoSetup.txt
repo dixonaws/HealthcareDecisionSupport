@@ -1,0 +1,29 @@
+From the Amazon Cognito console, you choose Manage new identity pool, and then choose Create new identity pool. You provide a pool name (botpool), choose Enable access to unauthenticated identities, and then choose Create Pool:
+
+Cognito_HealthcareDecisionSupportAuth_Role
+
+
+Cognito_HealthcareDecisionSupportUnauth_Role
+
+// Initialize the Amazon Cognito credentials provider
+CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
+    getApplicationContext(),
+    "us-east-1:52f3d0c9-ef5d-468a-a4a9-3dc95517b9bc", // Identity pool ID
+    Regions.US_EAST_1 // Region
+);
+
+// Initialize the Cognito Sync client
+CognitoSyncManager syncClient = new CognitoSyncManager(
+   getApplicationContext(),
+   Regions.US_EAST_1, // Region
+   credentialsProvider);
+
+// Create a record in a dataset and synchronize with the server
+Dataset dataset = syncClient.openOrCreateDataset("myDataset");
+dataset.put("myKey", "myValue");
+dataset.synchronize(new DefaultSyncCallback() {
+    @Override
+    public void onSuccess(Dataset dataset, List newRecords) {
+	//Your handler code here
+    }
+});
