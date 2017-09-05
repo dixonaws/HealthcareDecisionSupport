@@ -52,14 +52,13 @@
 </head>
 
 <body>
-	<h1 style="text-align:  left">Amazon Lex - BookTrip</h1>
+	<h1 style="text-align:  left">HMI HR Chatbot</h1>
 	<p style="width: 400px">
-		This little chatbot shows how easy it is to incorporate
-		<a href="https://aws.amazon.com/lex/" title="Amazon Lex (product)" target="_new">Amazon Lex</a> into your web pages.  Try it out.
+		You can use this interface to help select a healthcare plan at HMI
 	</p>
 	<div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
-		<input type="text" id="wisdom" size="80" value="" placeholder="I need a hotel room">
+		<input type="text" id="wisdom" size="80" value="" placeholder="Can I save money on healthcare?">
 	</form>
 	<script type="text/javascript">
 		// set the focus to the input box
@@ -90,7 +89,7 @@
 				// send it to the Lex runtime
 				var params = {
 					botAlias: '$LATEST',
-					botName: 'BookTrip',
+					botName: 'HMI_HR_Chatbot',
 					inputText: wisdom,
 					userId: lexUserId,
 					sessionAttributes: sessionAttributes

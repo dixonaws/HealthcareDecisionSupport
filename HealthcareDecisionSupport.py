@@ -86,7 +86,7 @@ def try_ex(func):
 # --- HealthcareDecisionSupport Intents ---
 
 def healthcareDecisionSupport(intent_request):
-    logger.debug("reached healthcareDecisionSupport intent method")
+    logger.debug("HealthcareDecisionSupport.py: reached healthcareDecisionSupport() method")
 
     # Receive the slots from the Lex chatbot and place the values into variables that match the slot name
     slots = intent_request['currentIntent']['slots']
@@ -102,16 +102,13 @@ def healthcareDecisionSupport(intent_request):
     HighConsumer = try_ex(lambda: slots['HighConsumer'])
     TrackExpenses = try_ex(lambda: slots['TrackExpenses'])
 
-    # test debug message
-    logger.debug('PreferHSA={}'.format(PreferHSA))
-
     # When to display the welcome message? When no slots contain data AND we have invocationSource=DialogCodeHook
     if(intent_request['invocationSource'] == "DialogCodeHook") and (PreferHSA is None) and (ExtremeSports is None) and (WiseConsumer is None) and (HighConsumer is None) and (TrackExpenses is None):
         logger.debug("healthcareDecisionSupport: I received dialog code hook.")
         logger.debug('All slots appear to contain no data')
 
         # the delegate method works
-        #return delegate(session_attributes, slots)
+        return delegate(session_attributes, slots, "Sure, we can try to find some savings in your healthcare spending.")
 
         #slot_to_elicit=str('PreferHSA')
         #message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
@@ -122,7 +119,7 @@ def healthcareDecisionSupport(intent_request):
         'Fulfilled',
         {
             'contentType': 'PlainText',
-            'content': 'HermanMiller HealthcareDecisionSupport v1.1: I recommend you enroll into a high-deductible healthcare plan.'
+            'content': 'I recommend you enroll into a high-deductible healthcare plan.'
         }
     )
 
