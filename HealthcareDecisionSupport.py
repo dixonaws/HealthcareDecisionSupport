@@ -102,24 +102,12 @@ def healthcareDecisionSupport(intent_request):
     HighConsumer = try_ex(lambda: slots['HighConsumer'])
     TrackExpenses = try_ex(lambda: slots['TrackExpenses'])
 
-    # When to display the welcome message? When no slots contain data AND we have invocationSource=DialogCodeHook
-    if(intent_request['invocationSource'] == "DialogCodeHook") and (PreferHSA is None) and (ExtremeSports is None) and (WiseConsumer is None) and (HighConsumer is None) and (TrackExpenses is None):
-        logger.debug("healthcareDecisionSupport: I received dialog code hook.")
-        logger.debug('All slots appear to contain no data')
-
-        # the delegate method works
-        return delegate(session_attributes, slots, "Sure, we can try to find some savings in your healthcare spending.")
-
-        #slot_to_elicit=str('PreferHSA')
-        #message='Welcome to HMI HR Bot - HealthcareDecisionSupport v1.0'
-        #return elicit_slot(session_attributes, intent_request['currentIntent']['name'],slots,slot_to_elicit, message)
-
     # if we fall through to this point, we consider the call a fulfillment request
     return close(
         'Fulfilled',
         {
             'contentType': 'PlainText',
-            'content': 'I recommend you enroll into a high-deductible healthcare plan.'
+            'content': 'I recommend you enroll into a <a>high-deductible healthcare plan</a>.'
         }
     )
 

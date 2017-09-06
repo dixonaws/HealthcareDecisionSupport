@@ -1,0 +1,21 @@
+{
+  "cognito": {
+    "poolId": "us-east-1:52f3d0c9-ef5d-468a-a4a9-3dc95517b9bc"
+  },
+  "lex": {
+    "botName": "HMI_HR_Chatbot",
+    "initialText": "You can ask me for help about your healthcare benefits. We may be able to find some savings! To get started, just type \"Help me with healthcare\".",
+    "initialSpeechInstruction": "Say 'Help me with healthcare' to get started."
+  },
+  "polly": {
+    "voiceId": "Salli"
+  },
+  "ui": {
+    "parentOrigin": "",
+    "toolbarTitle": "HMI HR Chatbot",
+    "toolbarLogo": ""
+  },
+  "recorder": {
+    "preset": "speech_recognition"
+  }
+}
